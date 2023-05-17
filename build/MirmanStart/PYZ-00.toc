@@ -1,8 +1,12 @@
-('C:\\Users\\Baros\\OneDrive\\Pulpit\\Pytony\\Baroszowy pacman\\Wersja '
- 'robocza\\build\\MirmanStart\\PYZ-00.pyz',
+('C:\\Users\\Baros\\OneDrive\\Pulpit\\Pytony\\Baroszowy '
+ 'pacman\\dist\\Mirman\\build\\MirmanStart\\PYZ-00.pyz',
  [('Mirman3',
-   'C:\\Users\\Baros\\OneDrive\\Pulpit\\Pytony\\Baroszowy pacman\\Wersja '
-   'robocza\\Mirman3.pyw',
+   'C:\\Users\\Baros\\OneDrive\\Pulpit\\Pytony\\Baroszowy '
+   'pacman\\dist\\Mirman\\Mirman3.pyw',
+   'PYMODULE'),
+  ('MirmanStart',
+   'C:\\Users\\Baros\\OneDrive\\Pulpit\\Pytony\\Baroszowy '
+   'pacman\\dist\\Mirman\\MirmanStart.pyw',
    'PYMODULE'),
   ('__future__',
    'C:\\Users\\Baros\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\__future__.py',
