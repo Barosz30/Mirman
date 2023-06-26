@@ -48,6 +48,7 @@ def show_start_screen():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
+            
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if new_game_button.collidepoint(event.pos):
                     pygame.mixer.music.stop()
@@ -75,12 +76,31 @@ def show_start_screen():
                     pygame.quit()
                     sys.exit()
                     
+        # Get the mouse position
+        mouse_pos = pygame.mouse.get_pos()
 
-        # draw buttons and other elements
+        # Check if the mouse hovers over the buttons
+        if new_game_button.collidepoint(mouse_pos):
+            new_game_color = (255, 100, 100)  # New color for "New Game" button
+        else:
+            new_game_color = (255, 0, 0)  # Original color for "New Game" button
+
+        if highscore_button.collidepoint(mouse_pos):
+            highscore_color = (100, 255, 100)  # New color for "High Scores" button
+        else:
+            highscore_color = (0, 255, 0)  # Original color for "High Scores" button
+
+        if exit_button.collidepoint(mouse_pos):
+            exit_color = (100, 100, 255)  # New color for "Exit" button
+        else:
+            exit_color = (0, 0, 255)  # Original color for "Exit" button
+                    
+
         
-        pygame.draw.rect(screen, (255, 0, 0), new_game_button)
-        pygame.draw.rect(screen, (0, 255, 0), highscore_button)
-        pygame.draw.rect(screen, (0, 0, 255), exit_button)
+        # Draw the buttons with the updated colors
+        pygame.draw.rect(screen, new_game_color, new_game_button)
+        pygame.draw.rect(screen, highscore_color, highscore_button)
+        pygame.draw.rect(screen, exit_color, exit_button)
 
         screen.blit(new_game_text, (new_game_button.x + 30, new_game_button.y + 10))
         screen.blit(highscore_text, (highscore_button.x + 20, highscore_button.y + 10))
